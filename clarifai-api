@@ -1,1 +1,48 @@
-Clarifai.App("T-AOiWdOm_EPaU4U2QK4h4A5SMttghRtxmhl_MDV","WTgekJY7RRVtASRV7x-5ZA2qd-l1bApn0hisiQLH");
+<html>
+
+<head>
+  <script type="text/javascript" src="https://sdk.clarifai.com/js/clarifai-latest.js"></script>
+</head>
+
+
+<body>
+
+<h1>Clarifai demo </h1>
+
+<script>
+ var app = new Clarifai.App(
+
+                'T-AOiWdOm_EPaU4U2QK4h4A5SMttghRtxmhl_MDV',
+
+                'WTgekJY7RRVtASRV7x-5ZA2qd-l1bApn0hisiQLH'
+
+            );
+
+
+
+                // predict the contents of an image by passing in a url
+
+            app.models.predict(Clarifai.GENERAL_MODEL,'image url').then(
+
+                function(response) {
+
+
+
+                    for(var i=0;i<20;i++) {
+
+                        console.log(response['rawData']['outputs'][0]['data']['concepts'][i]['name']);
+
+                    }
+
+                },
+
+                function(err) {
+
+                    console.error(err);
+
+                }
+
+            );
+</script>
+</body>
+</html>
