@@ -56,8 +56,8 @@
             base64Url = base64Url.split(',')[1];
 
             var app = new Clarifai.App(
-                'CLIENTID',
-                'CLIENTSECRET'
+                 'T-AOiWdOm_EPaU4U2QK4h4A5SMttghRtxmhl_MDV',
+                'WTgekJY7RRVtASRV7x-5ZA2qd-l1bApn0hisiQLH'
             );
 
                 // predict the contents of an image by passing in a url
